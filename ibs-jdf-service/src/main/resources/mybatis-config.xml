@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+	<typeAliases>
+		<typeAlias type="java.util.Date" alias="Date"/>
+		<typeAlias type="java.util.Map" alias="Map"/>
+		<typeAlias type="java.util.List" alias="List"/>
+		<typeAlias type="java.lang.Long" alias="Long"/>
+		<typeAlias type="java.lang.Integer" alias="Integer"/>
+		<typeAlias type="java.lang.String" alias="String"/>
+		<typeAlias type="java.lang.Double" alias="Double"/>
+		<typeAlias type="java.lang.Boolean" alias="Boolean"/>
+		<typeAlias type="com.handpay.ibenefit.framework.util.PageSearch" alias="PageSearch"/>
+	</typeAliases>
+	<plugins>
+		<plugin interceptor="com.handpay.ibenefit.framework.dao.MybatisDaoInterceptor"></plugin>
+		<plugin interceptor="com.handpay.ibenefit.framework.dao.MyBatisPageInterceptor"></plugin>
+	</plugins>
+	<mappers>
+	</mappers>
+
+</configuration>
